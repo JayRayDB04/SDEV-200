@@ -1,0 +1,63 @@
+import java.util.*;
+import java.util.GregorianCalendar;
+
+public class M02P1 {
+    public static void main(String[] args){
+
+        MyDate testDate1 = new MyDate();
+        MyDate testDate2 = new MyDate(34355555133101L);
+
+        System.out.println("TestDate1: " + testDate1.getMonth() + "/" + testDate1.getDay() + 
+			"/" + testDate1.getYear());
+		System.out.println("TestDate2: " + testDate2.getMonth() + "/" + testDate2.getDay() + 
+			"/" + testDate2.getYear());
+
+    }
+
+}
+
+class MyDate {
+    private int year;
+    
+    private int day;
+    
+    private int month;
+  
+    MyDate(){
+        GregorianCalendar calander = new GregorianCalendar();
+		year = calander.get(GregorianCalendar.YEAR);
+		month = calander.get(GregorianCalendar.MONTH);
+		day = calander.get(GregorianCalendar.DAY_OF_MONTH);
+    }
+
+    MyDate(long elapsedTime){
+        setDate(elapsedTime);
+    } 
+    
+    MyDate(int year, int month, int day){
+        this.year = year ;
+        this.month = month;
+        this.day = day;
+        }
+
+    public int getYear(){
+        return this.year;
+    }
+
+    public int getDay(){
+        return this.day;
+    }
+
+    public int getMonth(){
+        return this.month;
+    }
+
+    public void setDate(long elapsedTime){
+        GregorianCalendar calander = new GregorianCalendar();
+		calander.setTimeInMillis(elapsedTime);
+		year = calander.get(GregorianCalendar.YEAR);
+		month = calander.get(GregorianCalendar.MONTH);
+		day = calander.get(GregorianCalendar.DAY_OF_MONTH);
+    }
+}   
+  
