@@ -11,10 +11,10 @@ public class DisplayImages extends Application {
 	public void start(Stage primaryStage) {
 		GridPane pane = new GridPane();
 
-		pane.add(new ImageView(new Image("images/uk.gif")), 0, 0);
-		pane.add(new ImageView(new Image("images/ca.gif")), 1, 0);
-		pane.add(new ImageView(new Image("images/china.gif")), 0, 1);
-		pane.add(new ImageView(new Image("images/us.gif")), 1, 1);
+		pane.add(new ImageView(new Image("uk.gif")), 0, 0);
+		pane.add(new ImageView(new Image("ca.gif")), 1, 0);
+		pane.add(new ImageView(new Image("china.gif")), 0, 1);
+		pane.add(new ImageView(new Image("us.gif")), 1, 1);
 
 		Scene scene = new Scene(pane);
 		primaryStage.setTitle("DisplayImages");
