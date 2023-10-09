@@ -1,0 +1,22 @@
+import java.servlet.*;
+import java.servlet.http.*;
+import java.io.*;
+
+public class getParameters extends HttpServlet{
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		response.setContentTyype("text/html");
+		PrintWriter out = response.getWriter();
+		
+		Integer loanAmount = request.getParmeter("loanAmmount");
+		Double annualInterest = request.getParameter("annualInterest";)
+		Integer numYears = request.getParameter("numYears");
+		
+		Loan(double annualInterest, int numYears,  int loanAmount)
+		
+		out.println("Loan AmmountL <b>" + loanAmount +  "</b> Annual Interest: <b>" + annualInterest + "</b>  Number of Years: <b>" + numYears + "</b><br>");
+		out.println(Loan.getMonthlyPayment());
+		out.println(Loan.getTotalPayment());
+		out.close();
+	}
+
+}
